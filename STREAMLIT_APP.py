@@ -9,7 +9,7 @@
 
 # In[2]:
 
-pip install textblob
+
 import streamlit as st
 from textblob import TextBlob 
 import pandas as pd
