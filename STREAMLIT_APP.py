@@ -8,10 +8,14 @@
 
 
 # In[2]
+
+
 import streamlit as st 
 import pandas as pd
+from textblob import TextBlob
 import altair as alt
 from sklearn.feature_extraction.text import CountVectorizer
+from nltk.sentiment import SentimentIntensityAnalyzer
 from sklearn.ensemble import GradientBoostingClassifier
 
 def convert_to_df(sentiment):
@@ -33,7 +37,7 @@ def analyze_token_sentiment(docx):
             neg_list.append(res)
         else:
             neu_list.append(i)
-    result = {positives: "pos_list",negatives: "neg_list",neutral: "neutral"} 
+    result = {"positives": pos_list,"negatives": neg_list,"neutral": neu_list} 
     return result
 def main():
     st.title("Sentiment Analysis NLP App")
@@ -86,10 +90,6 @@ def main():
         st.subheader("About")
 if __name__ == '__main__':
     main()
-
-
-
-
 
 # In[ ]:
 
