@@ -10,8 +10,7 @@
 # In[2]:
 
 
-import streamlit as st
-from textblob import TextBlob 
+import streamlit as st 
 import pandas as pd
 import altair as alt
 from sklearn.feature_extraction.text import CountVectorizer
